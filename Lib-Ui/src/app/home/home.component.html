@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <form [formGroup]="registerForm" #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+        <div class="form-group">
+            User_id : <input placeholder="user_id" class="form-control" formControlName="id" name="id" ngModel required/>
+            <div *ngIf="userid.invalid && userid.touched" class="alert alert-danger">Id is required</div>
+        </div>
+        <div class="form-group">
+            User_Name : <input placeholder="name" class="form-control" formControlName="name" name="name" ngModel required/>
+            <div *ngIf="username.invalid && username.touched" class="alert alert-danger">Name is required</div>
+        </div>
+        <div class="form-group">
+            Address : <input placeholder="address" class="form-control" formControlName="address" name="address" ngModel required/>
+            <div *ngIf="useraddress.invalid && useraddress.touched" class="alert alert-danger">Address is required</div>
+        </div>
+        &nbsp;
+
+        <div class="form-group">
+            <button class="btn btn-sm btn-success" type="submit">Register</button>
+        </div>
+
+
+
+    </form>
+
+</body>
+
+</html>

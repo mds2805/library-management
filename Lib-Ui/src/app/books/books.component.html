@@ -1,0 +1,23 @@
+<form action=viewbooks #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+    <div class="form-group">
+        Book_id : <input placeholder="book_id" class="form-control" name="b_id" ngModel required/>
+    </div>
+    <div class="form-group">
+        Book_Name : <input placeholder="name" class="form-control" name="b_name" ngModel required />
+    </div>
+    <div class="form-group">
+        Author : <input placeholder="name" class="form-control" name="author" ngModel required />
+    </div>
+    &nbsp;
+
+    <div class="form-group">
+        <button class="btn btn-sm btn-success" type="submit">ADD BOOK</button>
+    </div>
+    &nbsp;
+
+</form>
+
+
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" href="/addbook">Back</a></li>
+</ul>

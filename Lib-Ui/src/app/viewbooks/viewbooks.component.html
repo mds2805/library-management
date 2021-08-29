@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mt-10">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Search" name="search" [(ngModel)]="search" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Author</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let books of book | search:search">
+            <td>{{books.b_id}}</td>
+            <td>{{books.b_name}}</td>
+            <td>{{books.author}}</td>
+
+        </tr>
+    </tbody>
+</table>

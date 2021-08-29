@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>Address</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let users of user">
+            <td>{{users.id}}</td>
+            <td>{{users.name}}</td>
+            <td>{{users.address}}</td>
+            <td><i (click)="deleteUser(users.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" href="/addbook">Back</a></li>
+</ul>

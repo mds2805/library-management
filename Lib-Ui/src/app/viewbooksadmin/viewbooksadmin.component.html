@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let books of book">
+            <td>{{books.b_id}}</td>
+            <td>{{books.b_name}}</td>
+            <td>{{books.author}}</td>
+            <td><i (click)="deleteBook(books.b_id)" class="fa fa-trash" style="font-size:20px;color:red;"></i></td>
+        </tr>
+    </tbody>
+</table>
